@@ -4,6 +4,10 @@
 
 function ehPalindromo(texto) {
   // escreva sua solução aqui
+  const textoMinusculo = texto.toLowerCase();
+  const textoInvertido = textoMinusculo.split('').reverse().join('');
+  
+  return textoMinusculo === textoInvertido;
 }
 
 // Testes (não altere esta parte)

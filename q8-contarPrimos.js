@@ -4,8 +4,25 @@
 
 function contarPrimos(n) {
   // escreva sua solução aqui
-}
+  let quantidade = 0;
 
+  for (let num = 2; num <= n; num++) {
+    let ehPrimo = true;
+
+    for (let divisor = 2; divisor <= Math.sqrt(num); divisor++) {
+      if (num % divisor === 0) {
+        ehPrimo = false;
+        break;
+      }
+    }
+
+    if (ehPrimo) {
+      quantidade++;
+    }
+  }
+
+  return quantidade;
+}
 // Testes (não altere esta parte)
 console.log(contarPrimos(10) === 4 ? "OK" : "ERRO");
 console.log(contarPrimos(1) === 0 ? "OK" : "ERRO");
